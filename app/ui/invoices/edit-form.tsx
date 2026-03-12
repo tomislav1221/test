@@ -82,7 +82,9 @@ export default function EditInvoiceForm({
             <div id="amount-error" aria-live="polite" aria-atomic="true">
               {state.errors?.amount &&
                 state.errors.amount.map((error) => (
-                  <p className="mt-2 text-sm text-red-500">{error}</p>
+                  <p className="mt-2 text-sm text-red-500" key={error}>
+                    {error}
+                  </p>
                 ))}
             </div>
           </div>
